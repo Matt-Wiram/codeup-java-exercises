@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
-
         String cont;
         do { System.out.print("Say something to Bob: ");
             Scanner scanner = new Scanner(System.in);
