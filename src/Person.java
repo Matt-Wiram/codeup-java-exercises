@@ -1,14 +1,27 @@
-import java.util.Scanner;
-
 public class Person {
 
         private String name;
+        private int age;
 
         public Person(String name) {
             this.name = name;
+
+        }
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
         }
 
-        public String getName(){
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName(){
 //TODO: return the person's name
             return name;
 
@@ -26,7 +39,17 @@ public class Person {
 
 
     public static void main(String[] args) {
-        Person person = new Person("Matt");
+        Person character = new Person("Nathan");
+        System.out.print(character.getName() + " ");
+        System.out.print(character.getAge() + "\n");
+        character.sayHello();
+
+
+        Person person = new Person("Matt", 31);
+        person.setAge(34);
+        person.setName("John");
+        System.out.println(person.getName());
+        System.out.println(person.getAge());
         person.sayHello();
     }
 }

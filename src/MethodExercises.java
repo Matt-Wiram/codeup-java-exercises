@@ -99,16 +99,26 @@ public class MethodExercises {
     }
 
     public static void main(String[] args) {
-        System.out.println(add(4, 5));
-        System.out.println(subt(4, 5));
-        System.out.println(mul(4, 5));
-        System.out.println(div(4, 5));
-        System.out.println(mod(8, 3));
-        rollDice();
-
-//        int userInput = getInteger(1, 10);
+//        System.out.println(add(4, 5));
+//        System.out.println(subt(4, 5));
+//        System.out.println(mul(4, 5));
+//        System.out.println(div(4, 5));
+//        System.out.println(mod(8, 3));
+//        rollDice();
+        mult(2, 4);
+        int userInput = getInteger(1, 10);
 //        String userFact = getFactorial(1, 10);
 
 
+    }
+    public static int mult(int num1, int num2) {
+        int result = 0;
+        while (num2 > 0) {
+            result += num1;
+            num2--;
+            mult(num1, num2);
+        }
+        System.out.println(result);
+        return result;
     }
 }
