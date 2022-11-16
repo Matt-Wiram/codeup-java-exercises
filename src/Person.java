@@ -3,6 +3,9 @@ public class Person {
         private String name;
         private int age;
 
+        public Person() {
+
+        }
         public Person(String name) {
             this.name = name;
 
@@ -11,6 +14,7 @@ public class Person {
             this.name = name;
             this.age = age;
         }
+
 
 
     public int getAge() {
@@ -39,7 +43,7 @@ public class Person {
 
 
     public static void main(String[] args) {
-        Person character = new Person("Nathan");
+        Person character = new Person();
         System.out.print(character.getName() + " ");
         System.out.print(character.getAge() + "\n");
         character.sayHello();
