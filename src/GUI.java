@@ -9,12 +9,12 @@ public class GUI {
     public static void main(String[] args) {
         panel = new JPanel();
         frame = new JFrame("FrameDemo");
-        frame.setSize(500, 500);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
         frame.pack();
-
-
+        frame.setSize(500, 500);
+        frame.setVisible(true);
         panel.setLayout(null);
 
         JLabel label = new JLabel("is cool");
@@ -26,6 +26,6 @@ public class GUI {
         button.setText("Click me");
         panel.add(button);
 
-        frame.setVisible(true);
+
     }
 }

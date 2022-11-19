@@ -43,7 +43,8 @@ public class Person {
 
 
     public static void main(String[] args) {
-        Person character = new Person();
+        Person character = new Person("Matt");
+        character.setName("Pat");
         System.out.print(character.getName() + " ");
         System.out.print(character.getAge() + "\n");
         character.sayHello();

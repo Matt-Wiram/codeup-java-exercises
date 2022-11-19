@@ -18,7 +18,6 @@ public class Input {
     }
     private boolean yesNo;
     public boolean yesNo() {
-        scanner.nextLine();
         System.out.println("Continue [Yes/No]: ");
         Pattern regex = Pattern.compile("^(y|yes)$", Pattern.CASE_INSENSITIVE);
         Matcher equals = regex.matcher(scanner.nextLine());
