@@ -6,8 +6,7 @@ public class Rectangle extends Quadrilateral implements Measureable {
 
     public Rectangle(int length, int width) {
         super(length, width);
-        this.width = width;
-        this.length = length;
+
     }
 
     @Override
