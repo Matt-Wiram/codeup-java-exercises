@@ -40,9 +40,15 @@ public class Input {
 
     public int getInt(){
         System.out.println("Give me a number");
-        int num = scanner.nextInt();
-        System.out.println(num);
-        return num;
+        try {
+            int num = Integer.valueOf(getString());
+            System.out.println(num);
+            return num;
+        } catch (NumberFormatException e) {
+            System.out.println("Try inputting an integer");
+            return 0;
+        }
+
     }
 
     public double getDouble(double min, double max) {
@@ -58,9 +64,36 @@ public class Input {
 
     public double getDouble(){
         System.out.println("Give me a number");
-        double num = scanner.nextDouble();
-        System.out.println(num);
-        return num;
+        try {
+            double num = Double.valueOf(getString());
+            System.out.println(num);
+            return num;
+        } catch (NumberFormatException e) {
+            System.out.println("Try inputting an integer");
+            return 0;
+        }
+    }
+
+    public int getBinary () {
+        System.out.println("Give me a binary number");
+        try {
+            int num = Integer.valueOf(getString(), 2);
+            return num;
+        } catch (NumberFormatException e) {
+            System.out.println("Try inputting an integer");
+            return 0;
+        }
+    }
+
+    public int getHex () {
+        System.out.println("Give me a Hexidecimal number");
+        try {
+            int num = Integer.valueOf(getString(), 16);
+            return num;
+        } catch (NumberFormatException e) {
+            System.out.println("Try inputting an integer");
+            return 0;
+        }
     }
 
 
@@ -73,11 +106,14 @@ public class Input {
     public static void main(String[] args) {
         Input input = new Input(new Scanner(System.in));
 
-        input.getInt(1, 10);
-        input.yesNo();
-        input.getInt();
-        input.getDouble(1.0, 10.0);
-        input.getDouble();
+//        input.getInt(1, 10);
+//        input.yesNo();
+//        input.getInt();
+//        input.getDouble(1.0, 10.0);
+//        input.getDouble();
+        System.out.println(input.getBinary());
+
+        System.out.println(input.getHex());
 
     }
 
